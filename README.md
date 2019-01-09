@@ -1,6 +1,6 @@
 <h1>Chart.js</h1>
+<img align="left" width="100" height="100" src="https://github.com/WireBootstrap/Chartjs/blob/master/images/eb-chartjs.jpg">
 
-<img align="left" src="https://github.com/WireBootstrap/Chartjs/blob/master/images/chartjs5.png">
 <p>
 <strong>
 Charts for WireBootstrap using Chart.js
@@ -11,10 +11,18 @@ Vendor: <a href="http://www.chartjs.org/" target="_blank">Chart.js</a><br/>
 Support: <a href="http://www.www.com" target="_blank">WireBootstrap Forums</a><br/>
 Demo: <a href="http://www.chartjs.org/samples/latest">Chart.js Samples</a>
 </p>
+
+<hr/>
+
+<p>
+<img src="https://github.com/WireBootstrap/Chartjs/blob/master/images/chartjs5.png">
+</p>
+
 <p>
 Create widgets from the popular open source Chart.js charting library.  Chart.js supports bar, line, area, pie, and other chart types.
 </p>
 <hr/>
+
 <h1><a id="config">Configuration</a></h1>
 
 ```javascript
