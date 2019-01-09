@@ -15,7 +15,7 @@ Demo: <a href="http://www.chartjs.org/samples/latest">Chart.js Samples</a>
 <hr/>
 
 <p>
-<img src="https://github.com/WireBootstrap/Chartjs/blob/master/images/chartjs6.jpg">
+<img src="https://github.com/WireBootstrap/Chartjs/blob/master/images/chartjs4.jpg">
 </p>
 
 <p>
