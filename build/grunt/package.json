@@ -1,0 +1,16 @@
+{
+  "name": "eb.chartjs",
+  "version": "0.0.0",
+  "description": "Charts for WireBootstrap using Chartjs",
+  "license": "//cdn.wirebootstrap.com/libs/license/index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wirebootstrap/chartjs"
+  },
+  "dependencies": {
+    "grunt-contrib-uglify": "^1.0.2"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
