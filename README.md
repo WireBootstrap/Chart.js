@@ -8,7 +8,7 @@ Charts for WireBootstrap using Chart.js
 </p>
 <p>
 Vendor: <a href="http://www.chartjs.org/" target="_blank">Chart.js</a><br/>
-Support: <a href="http://www.www.com" target="_blank">WireBootstrap Forums</a><br/>
+Support: <a href="https://help.wirebootstrap.com/support/discussions/forums/22000200288" target="_blank">WireBootstrap Forums</a><br/>
 Demo: <a href="http://www.chartjs.org/samples/latest">Chart.js Samples</a>
 </p>
 
