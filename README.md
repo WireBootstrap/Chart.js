@@ -96,7 +96,7 @@ Create widgets from the popular open source Chart.js charting library.  Chart.js
 			</td>
 		</tr>
 		<tr>
-			<td style="width:100px">label</td>
+			<td style="width:100px">labels</td>
 			<td style="width:300px">Field to be used on the x-axis</td>
 			<td style="width:100px">labels</td>
 		</tr>
