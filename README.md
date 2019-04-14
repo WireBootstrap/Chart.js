@@ -27,17 +27,33 @@ Create widgets from the popular open source Chart.js charting library.  Chart.js
 
 ```javascript
 {
- "schema": {
-   "series": [],
-   "labels": "labels"
- },
- "type": "line",
- "chartjs": {
-   "options": {
-      "maintainAspectRatio": true,
-      "responsive": true
-   }
- }
+  "schema": {
+    "series": [],
+    "labels": "labels"
+  },
+  "type": "line",
+  "gridLinesX": true,
+  "gridLinesY": true,
+  "datalabels": {
+    "display": false,
+    "align": "center",
+    "anchor": "center",
+    "offset": 4,
+    "rotation": 0
+  },
+  "chartjs": {
+    "options": {
+      "legend": {
+        "position": "top",
+        "display": true
+      },
+      "title": {
+        "position": "top",
+        "display": false,
+        "fontSize": 12
+      }
+    }
+  }
 }
 ```
 <table>
