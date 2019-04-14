@@ -1,0 +1,281 @@
+<script type="text/javascript">
+
+
+    function chartType(t) {
+        debugger
+
+        var type = $(this).val();
+
+        var ctrl = angular.element(document.getElementById('plugin-options'));      
+              
+        var options = {type: type};
+
+        // switch(type) {
+        //     case "area":
+        //         options.type = "line";
+        //         options.area = true;
+        //     break;
+        // }
+
+        ctrl.scope().setOptions(options);      
+
+        t.selectedIndex = 1;
+    }
+
+       
+   
+    </script>
+
+    
+<form class="smart-form eb-collapse">
+
+<!------------ DATA -------------->
+<div>
+    <header>
+            <div style="cursor:pointer" data-toggle="collapse" data-target="#general"><span class="fa fa-minus-square-o"></span> General</div>
+    </header>
+        
+    <fieldset>
+
+        <section id="general" class="collapse in">
+
+            <div class="row">
+
+            <section class="col col-6">
+                <label>Series:</label>
+                <div eb-checkbox
+                     eb-data="fields()"
+                     eb-model="options.schema.series"
+                     data-class="checkbox state-default">
+                </div>
+                <span class="note">Specify the fields to be put on the chart</span>
+
+            </section>
+
+            <section class="col col-6">
+
+                    <section>
+                        <label>X-Axis:</label>
+                        <div eb-smartselect
+                            eb-data="fields()"
+                            eb-model="options.schema.labels">
+                        </div>
+                        <span class="note">Specify the field to be used on the x-axis</span>
+                    </section>
+                    <section style="padding-top:20px">
+                            <label class="label">Chart Type:</label>
+                            <label class="select">
+                                <select class="form-control" name='modelid' ng-model="options.type"> <!-- onchange="chartType(this)"-->
+                                    <option value="line">Line</option>
+                                    <option value="bar">Bar</option>
+                                    <option value="area">Area</option>
+                                    <option value="stackedArea">Stacked Area</option>                                             
+                                    <option value="horizontalBar">Horizontal Bar</option>                        
+                                    <option value="stackedBar">Stacked Bar</option>              
+                                    <option value="stackedHorizontalBar">Stacked Horizontal Bar</option>     
+                                    <option value="barLine">Bar/Line Combo</option>     
+                                    <option value="pie">Pie</option>
+                                    <option value="doughnut">Doughnut</option>                        
+                                </select><i></i>
+                            </label>
+                        <span class="note">Specify the chart type</span>
+                    </section>
+                           
+                </section>
+                
+            </div>
+            </section>
+
+    </fieldset>
+
+</div>
+
+
+<!------------ TITLE -------------->
+<div>
+        <header>
+                <div style="cursor:pointer" data-toggle="collapse" data-target="#title"><span class="fa fa-plus-square-o"></span> Title</div>
+        </header>
+        <fieldset>
+            <section id="title" class="collapse">
+
+                <div class="row">
+                <section class="col col-6">
+                    <label class="checkbox">
+                        <input type="checkbox" ng-model="options.chartjs.options.title.display">
+                        <i></i>Visible
+                    </label>
+                    <span class="note">Specify whether to display the chart title</span>
+                </section>
+                <section class="col col-6">
+                        <label class="label">Text:</label>
+                        <label class="input">
+                            <input type="text" placeholder="Title" ng-model="options.chartjs.options.title.text">
+                            <span class="note">Specify the chart title text</span>
+                        </label>
+                </section>
+                </div>
+
+                <div class="row">            
+                <section class="col col-6">
+                    <label class="label">Size:</label>
+                    <label class="input">
+                        <input type="number" placeholder="Size" ng-model="options.chartjs.options.title.fontSize">
+                    </label>
+                    <span class="note">Specify the font-size of the title</span>
+                </section>
+                <section class="col col-6">
+                        <label class="label">Position:</label>
+                        <label class="select">
+                            <select class="form-control" name='modelid2' ng-model="options.chartjs.options.title.position">
+                                <option value="top">Top</option>
+                                <option value="left">Left</option>
+                                <option value="bottom">Bottom</option>
+                                <option value="right">Right</option>                                             
+                            </select><i></i>
+                        </label>
+                    <span class="note">Specify the position of the title on the chart</span>
+                </section>
+                </div>
+                
+            </section>
+            </fieldset>    
+</div>
+    
+
+<!------------ LEGEND -------------->
+<div>
+        <header>
+                <div style="cursor:pointer" data-toggle="collapse" data-target="#legend"><span class="fa fa-plus-square-o"></span> Legend</div>
+        </header>
+        <fieldset>
+            <section id="legend" class="collapse">
+
+                <div class="row">
+                <section class="col col-6">
+                    <label class="checkbox">
+                        <input type="checkbox" ng-model="options.chartjs.options.legend.display">
+                        <i></i>Visible
+                    </label>
+                    <span class="note">Specify whether to display the legend</span>
+                </section>
+                <section class="col col-6">
+                    <label class="label">Position:</label>
+                    <label class="select">
+                        <select class="form-control" name='modelid2' ng-model="options.chartjs.options.legend.position">
+                            <option value="top">Top</option>
+                            <option value="left">Left</option>
+                            <option value="bottom">Bottom</option>
+                            <option value="right">Right</option>                                             
+                        </select><i></i>
+                    </label>
+                    <span class="note">Specify the position of the legend on the chart</span>
+                </section>
+                </div>
+                
+            </section>
+            </fieldset>    
+</div>
+
+<!------------ AXES -------------->
+<div>
+        <header>
+                <div style="cursor:pointer" data-toggle="collapse" data-target="#axes"><span class="fa fa-plus-square-o"></span> Axes</div>
+        </header>
+        <fieldset>
+            <section id="axes" class="collapse">
+
+                <div class="row">
+                <section class="col col-6">
+                    <label class="checkbox">
+                        <input type="checkbox" ng-model="options.gridLinesX">
+                        <i></i>X-Axis Gridlines
+                    </label>
+                    <span class="note">Specify whether to display gridlines on the X-Axis</span>
+                </section>
+                <section class="col col-6">
+                    <label class="checkbox">
+                        <input type="checkbox" ng-model="options.gridLinesY">
+                        <i></i>Y-Axis Gridlines
+                        </label>
+                        <span class="note">Specify whether to display gridlines on the Y-Axis</span>
+                    </section>
+                </div>
+                
+            </section>
+            </fieldset>    
+</div>
+
+
+<!------------ DATA LABELS -------------->
+<div>
+        <header>
+                <div style="cursor:pointer" data-toggle="collapse" data-target="#datalabels"><span class="fa fa-plus-square-o"></span> Data Labels</div>
+        </header>
+        <fieldset>
+            <section id="datalabels" class="collapse">
+
+                <div class="row">
+                <section class="col col-4">
+                    <label class="checkbox">
+                        <input type="checkbox" ng-model="options.datalabels.display">
+                        <i></i>Visible
+                    </label>
+                    <span class="note">Specify whether to display series labels</span>
+                </section>
+                <section class="col col-4">
+                        <label class="label">Anchor:</label>
+                        <label class="select">
+                            <select class="form-control" name='modelid2' ng-model="options.datalabels.anchor">
+                                <option value="center">Center</option>
+                                <option value="start">Start</option>
+                                <option value="end">End</option>
+                            </select><i></i>
+                        </label>
+                    <span class="note">Specify the position of the label on the series</span>
+                </section>
+                <section class="col col-4">
+                        <label class="label">Align:</label>
+                        <label class="select">
+                            <select class="form-control" name='modelid2' ng-model="options.datalabels.align">
+                                <option value="center">Center</option>
+                                <option value="start">Start</option>
+                                <option value="end">End</option>
+                                <option value="right">Right</option>        
+                                <option value="bottom">Bottom</option> 
+                                <option value="left">Left</option> 
+                                <option value="top">Top</option> 
+                            </select><i></i>
+                        </label>
+                    <span class="note">Specify the position of the label relative to the anchor</span>
+                </section>
+            </div>
+
+                <div class="row">            
+                <section class="col col-6">
+
+                        <label class="label">Offset:</label>
+                        <label class="input">
+                            <input type="number" placeholder="Offset" ng-model="options.datalabels.offset">
+                        </label>
+                        <span class="note">Specify the distance (pixels) from the anchor point</span>    
+
+                </section>
+                <section class="col col-6">
+                        <label class="label">Rotation:</label>
+                        <label class="input">
+                            <input type="number" placeholder="Rotation" ng-model="options.datalabels.rotation">
+                        </label>
+                        <span class="note">Specify the clockwise rotation angle (degrees) of the label</span>    
+                </section>
+                </div>
+                
+            </section>
+            </fieldset>    
+</div>
+
+
+
+</form>
+
+

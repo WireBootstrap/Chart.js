@@ -13,7 +13,7 @@ module.exports = function(grunt) {
             },
             dist: {
             files: {
-                '../lib/eb-chartjs.min.js': ['../../plugins/eb-chartjs.js']
+                '../dist/eb-chartjs.min.js': ['../src/eb-chartjs.js']
             }
           }
         }

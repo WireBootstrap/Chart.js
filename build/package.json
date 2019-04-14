@@ -8,6 +8,7 @@
     "url": "https://github.com/wirebootstrap/chartjs"
   },
   "dependencies": {
+    "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-uglify": "^1.0.2"
   },
   "devDependencies": {

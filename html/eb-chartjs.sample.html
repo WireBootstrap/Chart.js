@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chart.js Sample</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://localhost:65003/eb/classes/eb.js"></script>
+    <script type="text/javascript" src="http://localhost:65003/eb/classes/eb-ui.js"></script>
+    <script type="text/javascript" src="../src/eb-chartjs.js"></script>
+
+    <script type="text/javascript">
+
+    var data = [
+        {month: "January", sales: 65, cost: 28},
+        {month: "February", sales: 59, cost: 48},
+        {month: "March", sales: 80, cost: 40},
+        {month: "April", sales: 81, cost: 19},
+        {month: "May", sales: 65, cost: 58},
+        {month: "June", sales: 55, cost: 27},
+        {month: "July", sales: 90, cost: 80}
+    ]
+
+    var table = new eb.data.DataTable(data);               
+
+
+    $(document).ready(function() {
+        $("#chart").ebChartjs({
+            data: table,
+            type: 'line',
+            schema: {series: ['sales'], labels: 'month'}
+        });
+    });
+        
+    
+    </script>
+
+</head>
+
+<body>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+
+
+</body>
+</html>
