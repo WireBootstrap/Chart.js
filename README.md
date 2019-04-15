@@ -77,28 +77,21 @@ Create widgets from the popular open source Chart.js charting library.  Chart.js
 			<td style="width:300px">Type of chart to be plotted. View the list of valid values <a href="http://www.chartjs.org/docs/latest/charts/" target="_new">here</a>.</td>
 			<td style="width:100px">line</td>
 		</tr>
-
 		<tr>
 			<td style="width:100px">gridLinesX</td>
 			<td style="width:300px">Display vertical lines on the chart.</td>
 			<td style="width:100px">line</td>
 		</tr>
-
-<tr>
+		<tr>
 			<td style="width:100px">gridLinesY</td>
 			<td style="width:300px">Display horizontal lines on the chart.</td>
 			<td style="width:100px">line</td>
 		</tr>
-
-		</tr>
-
-<tr>
+		<tr>
 			<td style="width:100px">datalabels</td>
 			<td style="width:300px">Series labels using the <a href="https://github.com/chartjs/chartjs-plugin-datalabels">datalabels<a> plugin.</td>
 			<td style="width:100px">line</td>
 		</tr>
-				
-		
 		<tr>
 			<td style="width:100px">chartjs</td>
 			<td style="width:300px">Use this property to set the chart's <a href="http://www.chartjs.org/docs/latest/configuration" target="_new">native configuration options</a></td>
