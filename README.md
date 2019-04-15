@@ -80,17 +80,17 @@ Create widgets from the popular open source Chart.js charting library.  Chart.js
 		<tr>
 			<td style="width:100px">gridLinesX</td>
 			<td style="width:300px">Display vertical lines on the chart.</td>
-			<td style="width:100px">line</td>
+			<td style="width:100px">true</td>
 		</tr>
 		<tr>
 			<td style="width:100px">gridLinesY</td>
 			<td style="width:300px">Display horizontal lines on the chart.</td>
-			<td style="width:100px">line</td>
+			<td style="width:100px">true</td>
 		</tr>
 		<tr>
 			<td style="width:100px">datalabels</td>
 			<td style="width:300px">Series labels using the <a href="https://github.com/chartjs/chartjs-plugin-datalabels">datalabels<a> plugin.</td>
-			<td style="width:100px">line</td>
+			<td style="width:100px"></td>
 		</tr>
 		<tr>
 			<td style="width:100px">chartjs</td>
